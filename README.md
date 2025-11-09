@@ -1,25 +1,37 @@
-System Maintenance Suite:
+# Bash Maintenance Suite
 
-The System Maintenance Suite is a Windows-based batch automation project that simplifies system maintenance through scripting.  
-It performs tasks like data backup, cleanup of temporary files, log monitoring, and system optimization — all through a single automated script.
+This project is a collection of Bash scripts designed to automate routine system maintenance tasks on Linux-based systems. It includes scripts for backups, system updates, log monitoring, and more, all organized into day-wise modules for clarity and ease of use.
 
-This project demonstrates the power of Windows Command Line (CMD) and PowerShell scripting for real-world system management without any third-party tools.
+## Features
 
+- *Automated Backups*: Automate backups of important directories with retention policies.
+- *System Updates*: Automatically update and clean system packages.
+- *Log Monitoring*: Automatically scan logs for errors or specific patterns.
+- *Interactive Menu*: Use a command-line interface to easily choose and run tasks.
+- *Modular Design*: Organized into day-wise scripts to clearly separate tasks.
 
-Overview:
-This project automates routine system maintenance tasks that users usually perform manually — such as cleaning temporary files, clearing the Recycle Bin, backing up important documents, and checking system event logs.
+## Project Structure
 
-By using simple batch scripting and PowerShell integration, it reduces repetitive work and ensures important files are safely stored.
+bash-maintenance-suite/
+├── Day1/
+│ └── backup.sh # Backup script
+├── Day2/
+│ └── update_cleanup.sh # Update and cleanup script
+├── Day3/
+│ └── log_monitor.sh # Log monitoring script
+├── Day4/
+│ └── menu.sh # Interactive menu script
+├── Day5/
+│ └── utils.sh # Utility functions used by other scripts
+└── logs/ # Directory for storing logs
 
- Features :
+## Requirements
+- *Bash Shell*: The scripts are written in Bash and should be run in a Bash-compatible environment (Linux/WSL).
+- *Required Tools*: tar, apt (or any similar package manager), grep, cron
 
-- Automated File Backup — Creates a compressed ZIP backup of your `Documents` folder in `C:\BackupFiles`  
-- System Cleanup — Removes temporary files and clears the Recycle Bin  
-- Log Monitoring — Extracts and saves the last 10 Windows Event Logs  
-- Activity Logging — Records all actions with timestamps in `system_maintenance.log`  
-- Central Control Script — Runs all maintenance scripts with one click  
+## Installation
 
-
-
-
-
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/bash-maintenance-suite.git
+   cd bash-maintenance-suite
